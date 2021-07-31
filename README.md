@@ -1,7 +1,7 @@
 # Tech-Blog [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Screenshot
-
+## Screenshot (current progress)
+<img width="1440" alt="Screen Shot 2021-07-30 at 11 24 13 PM" src="https://user-images.githubusercontent.com/70029654/127727420-37cfc7ad-adbf-42a3-aa6d-40136f673735.png">
 ## Description
 
 A full stack web app that serves as a forum for users to post content. This app was built using Handlebars.js as the template engine, Sequelize as the ORM for the MySQL database, Express.js for the server and Node.js for the backend engine.
