@@ -27,11 +27,12 @@
           href="/dashboard"
         >Dashboard</a></div>
       {{#if loggedIn}}
-        <div class="nav-item bg-secondary p-2" id="logout">Logout</div>
+        <button class="nav-item btn btn-success p-2" id="logout">Logout</button>
         {{! <div class="nav-item"><a href="/dashboard">Dashboard</a></div> }}
       {{else}}
-        <div class="nav-item bg-secondary p-2" id="login"><a href="/login">Sign
-            in</a></div>
+        <button class="nav-item btn btn-success p-2" id="login"><a
+            href="/login"
+          >Sign in</a></button>
 
       {{/if}}
     </nav>
