@@ -27,12 +27,11 @@
           href="/dashboard"
         >Dashboard</a></div>
       {{#if loggedIn}}
-        <div class="nav-item bg-secondary p-2"><a
-            href="/api/user/logout"
-          >Logout</a></div>
+        <div class="nav-item bg-secondary p-2" id="logout">Logout</div>
         {{! <div class="nav-item"><a href="/dashboard">Dashboard</a></div> }}
       {{else}}
-        <div class="nav-item bg-secondary p-2"><a href="/login">Login</a></div>
+        <div class="nav-item bg-secondary p-2" id="login"><a href="/login">Sign
+            in</a></div>
 
       {{/if}}
     </nav>
