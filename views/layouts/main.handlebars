@@ -15,14 +15,14 @@
       {{#if loggedIn}}
         <button id="logout" class="btn-no-style">Logout</button>
       {{else}}
-        <a href="/login">Login</a>
+        <a href="/api/user/login">Login</a>
       {{/if}}
     </nav>
     <main>
       <aside>
         <h2>Enjoy the forum!</h2>
       </aside>
-      <div class="forum">
+      <div class="all-posts">
         {{{body}}}
       </div>
     </main>
