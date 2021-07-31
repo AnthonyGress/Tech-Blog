@@ -9,3 +9,13 @@ a:hover {
   text-decoration: none;
   color: inherit;
 }
+
+.body-wrapper {
+  display: block;
+  width: 100%;
+  margin-top: 5%;
+}
+
+/* .card {
+  align-items: center;
+} */

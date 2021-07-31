@@ -1,1 +1,40 @@
-<h1>Login Page</h1>
+<section class="row">
+  <div class="col-6 mx-auto">
+    <form class="login-form">
+      <div class="ms-5">
+        <div class="card bg-secondary align-items-center">
+          <div class="form-group w-75 my-3">
+            <label for="username-login">Username</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                id="username-login"
+                placeholder="Username"
+                aria-describedby="inputGroupPrepend"
+                required
+              />
+              <div class="invalid-feedback">
+                Please choose a username.
+              </div>
+            </div>
+          </div>
+          <div class="form-group w-75 my-4">
+            <label for="password-login">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password-login"
+              placeholder="Password"
+            />
+          </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+<script src="./js/login.js"></script>
