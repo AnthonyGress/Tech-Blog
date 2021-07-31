@@ -8,9 +8,9 @@
 
 A full stack web app that serves as a forum for users to post and comment on blog posts.
 
-This application's structure follows the Model-View-Controller paradigm. It uses _Handlebars.js_ for managing Views, _MySQL2_ and _Sequelize_ to connect to a MySQL database for the Models, and _Express.js_ for the Controllers.
+This application's structure follows the Model-View-Controller paradigm. It uses **_Handlebars.js_** for managing Views, **_MySQL2_** and **_Sequelize_** to connect to a MySQL database for the Models, and **_Express.js_** for the Controllers.
 
-It also utilizes _dotenv_ for environment variables, _bcrypt_ - to hash passwords, and _express-session/connect-session-sequelize_ for authentication.
+It also utilizes **_dotenv_** for environment variables, **_bcrypt_** - to hash passwords, and **_express-session/connect-session-sequelize_** for authentication.
 
 ## Table of Contents
 
