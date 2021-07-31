@@ -1,6 +1,7 @@
 # Tech-Blog [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Screenshot
+## Screenshot (current progress)
+<img width="1440" alt="Screen Shot 2021-07-30 at 11 24 13 PM" src="https://user-images.githubusercontent.com/70029654/127727420-37cfc7ad-adbf-42a3-aa6d-40136f673735.png">
 
 ## Description
 
@@ -33,8 +34,6 @@ exit
 ```
 
 ## Usage
-
-[<img width="641" alt="E-Commerce YT" src="https://user-images.githubusercontent.com/70029654/127418692-d2cb1d89-3035-4297-b518-7e3b020bb243.png">](https://youtu.be/K8jG-aDC6J8)
 
 This site is live at heroku link!
 
