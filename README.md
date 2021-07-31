@@ -35,8 +35,6 @@ exit
 
 ## Usage
 
-[<img width="641" alt="E-Commerce YT" src="https://user-images.githubusercontent.com/70029654/127418692-d2cb1d89-3035-4297-b518-7e3b020bb243.png">](https://youtu.be/K8jG-aDC6J8)
-
 This site is live at heroku link!
 
 To use this node app and create your own local server, clone the repo down, use the terminal to cd into the root directory. Then run:
