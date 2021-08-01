@@ -1,0 +1,14 @@
+<section class="container">
+  <h3 class="header text-center">Single Post</h3>
+  <section class="flex-row justify-center">
+    <section class="col">
+  <div class="card my-4 bg-dark">
+      <header class="ps-4 card-header bg-success">{{post.title}} - {{username}}</header>
+      <p class="ps-4 card-body">{{post.body}}</p>
+  </div>
+</section>
+    {{#each comments}}
+    {{> comment-details}}
+    {{/each}}
+  </section>
+</section>
