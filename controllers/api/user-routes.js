@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+// signup route create new user
 router.post("/", async (req, res) => {
   try {
     const dbUserData = await User.create({
@@ -20,17 +20,20 @@ router.post("/", async (req, res) => {
       email: req.body.email,
       password: req.body.password,
     });
+    const uid = await dbUserData.dataValues.id;
     req.session.save(() => {
       req.session.loggedIn = true;
-
+      req.session.uid = uid;
       res.status(200).json(dbUserData);
     });
+    console.log(dbUserData.dataValues.id);
+    console.log(req.session);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
-
+// login route
 router.post("/login", async (req, res) => {
   try {
     const dbUserData = await User.findOne({
@@ -38,7 +41,7 @@ router.post("/login", async (req, res) => {
         username: req.body.username,
       },
     });
-
+    const uid = await dbUserData.dataValues.id;
     if (!dbUserData) {
       res
         .status(400)
@@ -57,7 +60,7 @@ router.post("/login", async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-
+      req.session.uid = uid;
       res
         .status(200)
         .json({ user: dbUserData, message: "You are now logged in!" });

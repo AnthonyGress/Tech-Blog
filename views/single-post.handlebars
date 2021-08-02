@@ -15,29 +15,13 @@
     <h3 class="text-center">No comments yet..be the first to say something!</h3>
   </div>
   {{/if}}
+  <h3 class="text-center">Leave a Comment</h3>
   {{#if loggedIn}}
-  <div class="form-group w-75 my-3">
-            <label for="leave-comment">Comment</label>
-            <div class="input-group">
-              <div class="input-group-prepend h-100">
-                <span class="input-group-text" id="inputGroupPrepend">
-                  <i class="bi bi-envelope-fill fs-4"></i>
-                </span>
-              </div>
-              <input
-                type="text"
-                class="form-control"
-                id="leave-comment"
-                placeholder="Leave a comment"
-                aria-describedby="inputGroupPrepend"
-                required
-              />
-            </div>
-            <div class="invalid-feedback">
-              Please enter a valid comment.
-            </div>
-          </div>
-{{/if}}
+   {{> leave-comment}}
+   <script src="/js/comment.js"></script>
+  {{else}}
+<h3 class="mt-4">Sign in to leave a comment</h3> <button class="nav-item btn btn-success p-2" id="login"><a href="/login">Sign in</a></button>
+  {{/if}}
 </section>
   </section>
 </section>
