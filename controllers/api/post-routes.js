@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const { Post, Comment } = require("../../models");
-const getUsername = require("../../utils/dbHelpers");
+const { Post, Comment, User } = require("../../models");
+const withAuth = require("../../utils/auth");
 // /api/post routes
 
 router.post("/", async (req, res) => {
@@ -21,11 +21,26 @@ module.exports = router;
 
 router.get("/:id", async (req, res) => {
   try {
-    const dbPostData = await Post.findByPk(req.params.id);
+    const dbPostData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: Comment,
+          include: [
+            {
+              model: User,
+              attributes: ["username", "id"],
+            },
+          ],
+        },
+        {
+          model: User,
+          attributes: ["username", "id"],
+        },
+      ],
+    });
     const post = dbPostData.get({ plain: true });
-    const username = await getUsername(req.params.id);
-    console.log(username);
-    res.render("single-post", { post, username });
+    console.log(post);
+    res.render("single-post", post);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

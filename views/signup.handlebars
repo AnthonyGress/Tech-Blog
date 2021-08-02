@@ -1,1 +1,71 @@
-<h1>Sign-Up Page</h1>
+<h1 class="text-center">Sign-Up Page</h1>
+<section class="row">
+  <div class="col-6 mx-auto">
+    <form class="signup-form">
+      <div class="ms-5">
+        <div class="card bg-secondary align-items-center">
+          <div class="form-group w-75 my-3">
+            <label for="email-signup">Email</label>
+            <div class="input-group">
+              <div class="input-group-prepend h-100">
+                <span class="input-group-text" id="inputGroupPrepend">
+                  <i class="bi bi-envelope-fill fs-4"></i>
+                </span>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                id="email-signup"
+                placeholder="Email"
+                aria-describedby="inputGroupPrepend"
+                required
+              />
+            </div>
+            <div class="invalid-feedback">
+              Please enter a valid email.
+            </div>
+          </div>
+          <div class="form-group w-75 my-3">
+            <label for="username-signup">Username</label>
+            <div class="input-group">
+              <div class="input-group-prepend h-100">
+                <span class="input-group-text" id="inputGroupPrepend">
+                  <i class="bi bi-person-fill fs-4"></i>
+                </span>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                id="username-signup"
+                placeholder="Username"
+                aria-describedby="inputGroupPrepend"
+                required
+              />
+            </div>
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
+          </div>
+          <div class="form-group w-75 my-4">
+            <label for="password-signup">Password</label>
+            <div class="input-group">
+              <div class="input-group-prepend h-100">
+                <span class="input-group-text" id="inputGroupPrepend">
+                  <i class="bi bi-key-fill fs-4"></i>
+                </span>
+              </div>
+              <input
+                type="password"
+                class="form-control"
+                id="password-signup"
+                placeholder="Password"
+              />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success btn-lg btn-block">Sign Up</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+<script src="./js/login.js"></script>

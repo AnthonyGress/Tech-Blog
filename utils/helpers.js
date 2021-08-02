@@ -1,10 +1,15 @@
-// const { User } = require("../models");
+const { User } = require("../models");
 
-// module.exports = {
-//   get_username: async (user_id) => {
-//     const dbUserData = await User.findByPk(user_id);
-//     const username = dbUserData.get({ plain: true });
-//     console.log(username);
-//     return username.username;
-//   },
-// };
+get_username = (user_id) => {
+  User.findByPk(user_id)
+    .then((user) => {
+      const username = user.get({ plain: true });
+      console.log(username.username);
+      return username.username;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+module.exports = { get_username };

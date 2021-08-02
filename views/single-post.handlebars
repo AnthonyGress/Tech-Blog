@@ -3,12 +3,41 @@
   <section class="flex-row justify-center">
     <section class="col">
   <div class="card my-4 bg-dark">
-      <header class="ps-4 card-header bg-success">{{post.title}} - {{username}}</header>
-      <p class="ps-4 card-body">{{post.body}}</p>
+      <header class="ps-4 card-header bg-success">{{title}} - {{user.username}}</header>
+      <p class="ps-4 card-body">{{body}}</p>
   </div>
-</section>
+  {{#if comments}}
     {{#each comments}}
     {{> comment-details}}
     {{/each}}
+  {{else}}
+  <div class="mt-5">
+    <h3 class="text-center">No comments yet..be the first to say something!</h3>
+  </div>
+  {{/if}}
+  {{#if loggedIn}}
+  <div class="form-group w-75 my-3">
+            <label for="leave-comment">Comment</label>
+            <div class="input-group">
+              <div class="input-group-prepend h-100">
+                <span class="input-group-text" id="inputGroupPrepend">
+                  <i class="bi bi-envelope-fill fs-4"></i>
+                </span>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                id="leave-comment"
+                placeholder="Leave a comment"
+                aria-describedby="inputGroupPrepend"
+                required
+              />
+            </div>
+            <div class="invalid-feedback">
+              Please enter a valid comment.
+            </div>
+          </div>
+{{/if}}
+</section>
   </section>
 </section>
