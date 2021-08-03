@@ -1,4 +1,5 @@
 const editForm = document.querySelector(".edit-post-form");
+const deleteBtn = document.querySelector(".deleteBtn");
 
 const getUid = async () => {
   const response = await fetch("/api/user/uid");
@@ -20,7 +21,7 @@ const editPostHandler = async (event) => {
     });
 
     if (response.ok) {
-      alert("New Post Submitted Successfully");
+      alert("Post Edited Successfully");
       document.location.replace("/dashboard");
     } else {
       alert("Failed to update post.");
@@ -28,4 +29,19 @@ const editPostHandler = async (event) => {
   }
 };
 
+const deletePostHandler = async () => {
+  const post_id = window.location.href.toString().split("/").pop();
+  const response = await fetch(`/api/post/${post_id}`, {
+    method: "DELETE",
+  });
+
+  if (response.ok) {
+    alert("Post has been deleted!");
+    document.location.replace("/dashboard");
+  } else {
+    alert("Failed to update post.");
+  }
+};
+
+deleteBtn.addEventListener("click", deletePostHandler);
 editForm.addEventListener("submit", editPostHandler);

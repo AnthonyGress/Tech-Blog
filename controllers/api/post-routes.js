@@ -65,3 +65,17 @@ router.put("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.delete("/:id", async (req, res) => {
+  // delete post by its id value
+  console.log("deleting post");
+  try {
+    const destroy = await Post.destroy({ where: { id: req.params.id } });
+    res.status(200).json({
+      msg: `Destroyed Post ${req.params.id}`,
+      response: destroy,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
