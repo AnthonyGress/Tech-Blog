@@ -2,7 +2,8 @@
 
 ## Screenshot (current progress)
 
-<img width="1440" alt="Screen Shot 2021-07-30 at 11 24 13 PM" src="https://user-images.githubusercontent.com/70029654/127727420-37cfc7ad-adbf-42a3-aa6d-40136f673735.png">
+<img width="1440" alt="blog screenshot" src="https://user-images.githubusercontent.com/70029654/127954656-13172758-e9d6-4a68-b52f-9883ef398262.png">
+
 
 ## Description
 
