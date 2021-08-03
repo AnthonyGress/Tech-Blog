@@ -15,9 +15,3 @@ a:hover {
   width: 100%;
   margin-top: 5%;
 }
-
-.button-wrapper {
-  display: flex !important;
-  flex-direction: row;
-  justify-content: right;
-}

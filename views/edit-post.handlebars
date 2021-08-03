@@ -1,0 +1,59 @@
+<h1 class="text-center">Edit Post</h1>
+<section class="row">
+  <div class="col-6 mx-auto">
+    <form class="edit-post-form">
+      <div class="ms-5">
+        <div class="card bg-secondary align-items-center">
+          <div class="form-group w-75 my-3">
+            <label for="title-input">Title</label>
+            <div class="input-group">
+              <div class="input-group-prepend h-100">
+                <span class="input-group-text" id="inputGroupPrepend">
+                  <i class="bi bi-fonts fs-4"></i>
+                </span>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                id="title-input"
+                placeholder="Title"
+                aria-describedby="inputGroupPrepend"
+                value="{{postInfo.title}}"
+              />
+            </div>
+            <div class="invalid-feedback">
+              Please enter a valid title.
+            </div>
+          </div>
+          <div class="form-group w-75 my-3">
+            <label for="body-input">Body</label>
+            <div class="input-group">
+              <div class="input-group-prepend h-100">
+                <span class="input-group-text" id="inputGroupPrepend">
+                  <i class="bi bi-chat-square-text-fill fs-4"></i>
+                </span>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                id="body-input"
+                placeholder="Write something here..."
+                aria-describedby="inputGroupPrepend"
+                value="{{postInfo.body}}"
+              />
+            </div>
+            <div class="invalid-feedback">
+              Please enter something to post.
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-success btn-lg btn-block"
+          >Update</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+<script src="/js/edit-post.js"></script>
