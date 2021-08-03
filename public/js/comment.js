@@ -1,23 +1,27 @@
-const user_id = document.cookie;
-console.log(user_id);
 const commentForm = document.querySelector(".comment-form");
+
+const getUid = async () => {
+  const response = await fetch("/api/user/uid");
+  const uid = await response.json();
+  return uid;
+};
+
 const commentFormHandler = async (event) => {
   event.preventDefault();
-
+  const user_id = await getUid();
+  console.log(user_id);
   const comment = document.querySelector("#leave-comment").value.trim();
   const post_id = window.location.href.toString().split("/").pop();
-  if (comment && user_id) {
+  if (comment) {
     const response = await fetch("/api/comment", {
       method: "POST",
-      post_id: JSON.stringify(post_id),
-      user_id: JSON.stringify(user_id),
-      body: JSON.stringify(comment),
+      body: JSON.stringify({ body: comment, user_id, post_id }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
       console.log("all good");
-      // document.location.replace(`/api/post/${post_id}`);
+      document.location.replace(`/api/post/${post_id}`);
     } else {
       alert("Failed to leave a comment.");
     }

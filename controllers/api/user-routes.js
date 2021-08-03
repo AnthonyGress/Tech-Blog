@@ -80,3 +80,13 @@ router.post("/logout", (req, res) => {
     res.status(404).end();
   }
 });
+
+router.get("/uid", async (req, res) => {
+  const uid = req.session.uid;
+  try {
+    res.status(200).json(uid);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
