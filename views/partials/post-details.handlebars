@@ -1,8 +1,12 @@
 <section class="col">
   <div class="card my-4 bg-dark">
     <a href="/api/post/{{id}}">
-      <header class="ps-4 card-header bg-success">{{title}}
-        {{user.username}}</header>
+      <header class="ps-4 card-header bg-success">Post:
+        {{title}}
+        by:
+        {{user.username}}
+        on
+        {{format_date createdAt}}</header>
       <p class="ps-4 card-body">{{body}}</p>
     </a>
   </div>

@@ -21,7 +21,7 @@ const newPostHandler = async (event) => {
 
     if (response.ok) {
       alert("New Post Submitted Successfully");
-      document.location.replace("/");
+      document.location.replace("/dashboard");
     } else {
       alert("Failed to create post.");
     }
