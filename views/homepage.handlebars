@@ -1,6 +1,11 @@
 <section class="container">
   <h3 class="header text-center">Message Feed</h3>
   <section class="flex-row justify-center">
+    {{#if loggedIn}}
+    <div class="btn-wrapper">
+      <a href="/new-post"><button class="btn btn-success">New Post</button></a>
+    </div>
+    {{/if}}
     {{#each posts}}
     {{> post-details}}
     {{/each}}

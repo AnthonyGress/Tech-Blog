@@ -16,6 +16,8 @@ a:hover {
   margin-top: 5%;
 }
 
-/* .card {
-  align-items: center;
-} */
+.button-wrapper {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: right;
+}
