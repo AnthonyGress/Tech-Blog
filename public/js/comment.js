@@ -9,7 +9,6 @@ const getUid = async () => {
 const commentFormHandler = async (event) => {
   event.preventDefault();
   const user_id = await getUid();
-  console.log(user_id);
   const comment = document.querySelector("#leave-comment").value.trim();
   const post_id = window.location.href.toString().split("/").pop();
   if (comment) {
@@ -20,7 +19,6 @@ const commentFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      console.log("all good");
       document.location.replace(`/post/${post_id}`);
     } else {
       alert("Failed to leave a comment.");

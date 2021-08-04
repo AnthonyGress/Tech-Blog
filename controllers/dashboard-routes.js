@@ -5,7 +5,6 @@ const { Comment, Post } = require("../models");
 router.get("/", async (req, res) => {
   try {
     const uid = req.session.uid;
-    console.log(uid);
     const dbPostData = await Post.findAll({ where: { user_id: uid } });
     const posts = dbPostData.map((post) => post.get({ plain: true }));
     // TODO call helper to pull user info and display it on page
