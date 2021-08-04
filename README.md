@@ -1,8 +1,8 @@
 # Tech-Blog [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Screenshot (current progress)
+## Screenshot
 
-<img width="1440" alt="blog screenshot" src="https://user-images.githubusercontent.com/70029654/127954656-13172758-e9d6-4a68-b52f-9883ef398262.png">
+![Blog-Gif](https://user-images.githubusercontent.com/70029654/128105845-9252157f-e2a7-4590-9b50-1dc2c8c1003a.gif)
 
 
 ## Description
