@@ -21,7 +21,7 @@ const commentFormHandler = async (event) => {
 
     if (response.ok) {
       console.log("all good");
-      document.location.replace(`/api/post/${post_id}`);
+      document.location.replace(`/post/${post_id}`);
     } else {
       alert("Failed to leave a comment.");
     }

@@ -17,38 +17,6 @@ router.post("/", async (req, res) => {
   }
 });
 
-module.exports = router;
-
-router.get("/:id", async (req, res) => {
-  try {
-    const dbPostData = await Post.findByPk(req.params.id, {
-      include: [
-        {
-          model: Comment,
-          include: [
-            {
-              model: User,
-              attributes: ["username", "id"],
-            },
-          ],
-        },
-        {
-          model: User,
-          attributes: ["username", "id"],
-        },
-      ],
-    });
-    const post = dbPostData.get({ plain: true });
-    res.render("single-post", {
-      ...post,
-      loggedIn: req.session.loggedIn,
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-
 router.put("/:id", async (req, res) => {
   try {
     const dbPostData = await Post.update(
@@ -79,3 +47,5 @@ router.delete("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+module.exports = router;
