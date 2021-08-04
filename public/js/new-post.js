@@ -1,4 +1,3 @@
-console.log("New post js");
 const newPostForm = document.querySelector(".new-post-form");
 
 const getUid = async () => {

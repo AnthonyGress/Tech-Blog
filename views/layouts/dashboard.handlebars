@@ -22,14 +22,21 @@
       <h1 class="text-center my-3">Welcome to the Tech Blog</h1>
     </header>
     <nav class="navbar">
-      <div class="nav-item btn btn-success p-2"><a href="/">Home</a></div>
-      <div class="btn-wrapper">
-        <a href="/new-post"><button class="btn btn-success">New Post</button></a>
-      </div>
-      <button class="nav-item btn btn-success p-2" id="logout">Log Out</button>
+
+      <a class="nav-item btn btn-secondary p-2 w-25 ms-3" href="/">Home</a>
+      <a
+        href="/dashboard/"
+        class="nav-item btn btn-success p-2 w-25"
+      >Dashboard</a>
+      <button
+        class="nav-item btn btn-secondary p-2 w-25 me-3"
+        id="logout"
+      >Logout</button>
+
     </nav>
     <main>
       <div class="body-wrapper container">
+        <h2 class="header text-center">Dashboard</h2>
         {{{body}}}
       </div>
     </main>
