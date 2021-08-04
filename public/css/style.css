@@ -21,3 +21,7 @@ a:hover {
   width: 60px !important;
   border-radius: 50%;
 }
+
+.bi {
+  font-size: 1.7rem !important;
+}
