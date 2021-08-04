@@ -14,7 +14,7 @@ let isProd;
 PORT == process.env.PORT ? (isProd = true) : (isProd = false);
 const sess = {
   secret: "Super secret secret",
-  cookie: { secure: true },
+  cookie: {},
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
