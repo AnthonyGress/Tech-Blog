@@ -25,7 +25,7 @@ function idleLogout() {
   // timer set for 2 minutes of inactivity
   function resetTimer() {
     clearTimeout(t);
-    t = setTimeout(logout, 120000); // time is 2 minutes in milliseconds
+    t = setTimeout(logout, 900000); // time is 15 minutes in milliseconds
   }
 }
 idleLogout();
