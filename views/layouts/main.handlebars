@@ -22,19 +22,23 @@
       <h1 class="text-center my-3">Welcome to the Tech Blog</h1>
     </header>
     <nav class="navbar">
-      <div class="nav-item bg-secondary p-2"><a href="/">Home</a></div>
+      <a class="nav-item btn btn-success p-2 w-25 ms-3" href="/">Home</a>
       {{#if loggedIn}}
-        <div class="nav-item bg-secondary p-2"><a
-            href="/dashboard"
-          >Dashboard</a></div>
-        <button class="nav-item btn btn-success p-2" id="logout">Logout</button>
+        <a
+          href="/dashboard"
+          class="nav-item btn btn-secondary p-2 w-25"
+        >Dashboard</a>
+        <button
+          class="nav-item btn btn-secondary p-2 w-25 me-3"
+          id="logout"
+        >Logout</button>
       {{else}}
-        <button class="nav-item btn btn-success p-2" id="login"><a
-            href="/signup"
-          >Sign up</a></button>
-        <button class="nav-item btn btn-success p-2" id="login"><a
-            href="/login"
-          >Sign in</a></button>
+        <a href="/signup" class="nav-item btn btn-secondary p-2 w-25"><id
+            id="signup"
+          >Sign up</id></a>
+        <a href="/login" class="nav-item btn btn-secondary p-2 w-25 me-3"><id
+            id="login"
+          >Sign In</id></a>
 
       {{/if}}
     </nav>

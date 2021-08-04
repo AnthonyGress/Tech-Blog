@@ -1,11 +1,12 @@
 <section class="container">
-  <h3 class="header text-center">Single Post</h3>
+  <h2 class="header text-center">Post</h2>
   <section class="flex-row justify-center">
     <section class="col">
   <div class="card my-4 bg-dark">
       <header class="ps-4 card-header bg-success">Post: {{title}} by {{user.username}} on {{format_date createdAt}}</header>
       <p class="ps-4 card-body">{{body}}</p>
   </div>
+  <h3 class="text-center">Comments</h3>
   {{#if comments}}
     {{#each comments}}
     {{> comment-details}}
@@ -20,7 +21,7 @@
    {{> leave-comment}}
    <script src="/js/comment.js"></script>
   {{else}}
-<h3 class="mt-4">Sign in to leave a comment</h3> <button class="nav-item btn btn-success p-2" id="login"><a href="/login">Sign in</a></button>
+  {{> signupToComment}}
   {{/if}}
 </section>
   </section>
