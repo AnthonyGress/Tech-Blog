@@ -12,10 +12,9 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 let isProd;
 PORT == process.env.PORT ? (isProd = true) : (isProd = false);
-console.log(isProd);
 const sess = {
   secret: "Super secret secret",
-  cookie: {},
+  cookie: { secure: isProd },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
