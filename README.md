@@ -4,10 +4,9 @@
 
 ![Blog-Gif](https://user-images.githubusercontent.com/70029654/128105845-9252157f-e2a7-4590-9b50-1dc2c8c1003a.gif)
 
-
 ## Description
 
-A full stack web app that serves as a forum for users to post and comment on blog posts.
+A full stack PWA (progressive web app) that serves as a forum for users to post and comment on blog posts.
 
 This application's structure follows the Model-View-Controller paradigm. It uses **_Handlebars.js_** for managing Views, **_MySQL2_** and **_Sequelize_** to connect to a **_MySQL_** database for the Models, and **_Express.js_** for the Controllers.
 
