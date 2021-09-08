@@ -1,6 +1,7 @@
 const CACHE_NAME = "tech-blog.appcache";
 const urlsToCache = [
   "/",
+  "/dashboard",
   "/icons/icon-72x72.png",
   "/icons/icon-96x96.png",
   "/icons/icon-128x128.png",
