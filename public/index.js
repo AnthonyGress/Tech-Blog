@@ -24,6 +24,6 @@
       );
     }
   } catch (err) {
-    console.log(`ServiceWorker registration failed: ${error}`);
+    console.log(`ServiceWorker registration failed: ${err}`);
   }
 })();
